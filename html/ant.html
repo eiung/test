@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>蚂蚁线</title>
+    <style>
+        .item-box {
+            width: 400px; height: 200px;line-height: 200px;text-align: center;margin:auto;
+            border: 1px solid #ccc;
+            background: linear-gradient(#efefef,#ccc) padding-box,
+            linear-gradient(135deg, rgba(0, 0, 0, 1) 25%, transparent 25%, transparent 50%, rgba(1, 1, 1, 1) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+            background-size:100% 100%, 8px 8px;
+            animation: bg 1s linear infinite;
+        }
+        .item-box:hover{
+            cursor: pointer;
+            border: 1px dashed transparent;
+        }
+        .text{
+            height: 100%;
+            font-weight: bold;
+            -webkit-text-stroke: 2px #999;
+            color: #999;
+            font-size: 90px;
+
+            background-image: linear-gradient(135deg, rgba(0, 0, 0, 1) 25%, transparent 25%, transparent 50%, rgba(1, 1, 1, 1) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+            background-size: 8px 8px;
+            animation: bg 1s linear infinite;
+            -webkit-background-clip: text;
+        }
+        .text:hover{
+            -webkit-text-stroke: 2px transparent;
+        }
+
+        @keyframes bg {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 8px 0;
+            }
+        }
+
+
+        @keyframes ants {to { background-position:100% } }
+        #div5{
+            width: 200px;
+            height:200px;
+            padding:1em;
+            border: 1px solid transparent;
+            background:
+                    linear-gradient(white,white) padding-box,
+                    repeating-linear-gradient(-45deg,
+                    black 0,black 25%,white 0,white 50%
+                    )0 /.6em .6em;
+            animation:ants 12s linear infinite;
+        }
+
+        </style>
+</head>
+<body>
+    <div class="item-box"><div class="text">蚂蚁线</div></div>
+
+
+    <div id="div5"></div>
+
+</body>
+</html>
