@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>特效字</title>
+    <style>
+    body{margin: 0;background-color: #ddd;}
+    .text{
+        width: 300px;
+        margin: 10px auto;
+        background-color: #efefef;
+        line-height: 50px;
+        font-size: 32px;
+        text-align: center;
+        color: #b3ffb1;
+        font-weight: bold;
+}
+    .t1{
+        -webkit-text-stroke: 1px #ccc;
+        color: transparent;
+    }
+    .t2{
+        -webkit-text-stroke: 1px #ccc;
+    }
+    .t3{
+        -webkit-text-stroke: .5px #ccc;
+        color: transparent;
+        background-image: -webkit-linear-gradient(#71ffd6 40%, #ccff76 70%);
+        background-image: linear-gradient(#71ffd6 40%, #ccff76 70%);
+        -webkit-background-clip: text;
+        position: relative;
+    }
+    .t3:after{
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        content:'';
+        z-index: -1;
+        background-color: #efefef;
+    }
+    .t4{
+        background-image: linear-gradient(45deg, transparent 45%, #999 45%, #aaa 65%, transparent 0), linear-gradient(135deg, transparent 45%, #999 45%, #aaa 65%, transparent 0);
+        background-size: 5px 5px;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-stroke: 1px #666;
+        position: relative;
+    }
+    .t4:after{
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        content:'';
+        z-index: -1;
+        background-color: #efefef;
+    }
+    .t5{
+        text-shadow:2px 2px #666;
+        color: #fafafa;
+    }
+    .t6{
+        color: #fafafa;
+        text-shadow:2px 2px 4px #999,-1px -1px 0 #666, -2px -2px 0 #666;
+    }
+    .t7{
+        color: #fafafa;
+        text-shadow: 0 1px 0 #C9CFCE,
+        0 1px 3px rgba(0,0,0,.2),
+        1px 3px 5px rgba(0,0,0,.2),
+        2px 5px 10px rgba(0,0,0,.2),
+        3px 10px 10px rgba(0,0,0,.2);
+    }
+    .t8{
+        position: relative;
+        color: #666;
+        overflow: hidden;
+    }
+    .t8::after{
+        position: absolute;
+        display: block;
+        left: -200%;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        content:'';
+        z-index: 2;
+        background:-webkit-linear-gradient(135deg,rgba(255,255,255,.05) 20%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.05) 80%);
+        background:linear-gradient(135deg,rgba(255,255,255,.05) 20%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.05) 80%);
+        -webkit-animation: light .5s linear infinite;
+        animation: light 1s linear infinite;
+    }
+    @-webkit-keyframes light {
+        0%{left: -200%}
+        100%{left: 100%}
+    }
+    @keyframes light {
+        0%{left: -200%}
+        100%{left: 100%}
+    }
+    .t9{
+        color: rgba(255,0,0,.5);
+        position: relative;
+        text-decoration:line-through
+    }
+    .t9>span{
+        color: #666;
+    }
+
+
+        </style>
+</head>
+<body>
+    <div class="text t1">简单的文字样式</div>
+    <div class="text t2">简单的文字样式</div>
+    <div class="text t3">简单的文字样式</div>
+    <div class="text t4">简单的文字样式</div>
+    <div class="text t5">简单的文字样式</div>
+    <div class="text t6">简单的文字样式</div>
+    <div class="text t7">简单的文字样式</div>
+    <div class="text t8">简单的文字样式</div>
+    <div class="text t9"><span>简单的文字样式</span></div>
+</body>
+</html>

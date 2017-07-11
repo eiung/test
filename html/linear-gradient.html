@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        html,body{background-color: #efefef}
+        div{
+            width: 200px;
+            height: 100px;
+            margin: 20px auto;
+        }
+        .bg-1{
+            background-color: #fff;
+            background-image: linear-gradient(90deg, rgba(85, 136, 170, 0.5), 50%, transparent 0), linear-gradient(rgba(85, 136, 170, 0.5) 50%, transparent 0);
+            background-size: 19px 19px;
+        }
+        .bg-2{
+            background-color: rgba(85, 136, 170, 0.5);
+            background-image: linear-gradient(#fff 1px, transparent 0),linear-gradient(90deg, #fff 1px, transparent 0);
+            background-size: 20px 20px;
+        }
+        .bg-3{
+            background-color: rgba(85, 136, 170, 0.5);
+            background-image: linear-gradient(#fff 2px, transparent 0),
+            linear-gradient(90deg, #fff 2px, transparent 0),
+            linear-gradient(rgba(255,255,255,.3) 1px, transparent 0),
+            linear-gradient(90deg,rgba(255,255,255,.3) 1px, transparent 0);
+            background-size: 50px 50px, 50px 50px,10px 10px, 10px 10px;
+            background-position: -2px -2px;
+        }
+        .bg-4{
+            background-color: #9ed7da;
+            background-image: radial-gradient(rgba(255,255,255,.5) 40%, transparent 0);
+            background-size: 20px 20px;
+        }
+        .bg-5{
+            background-color: #9ed7da;
+            background-image: radial-gradient(rgba(255,255,255,.3) 50%, transparent 0), radial-gradient(rgba(255,255,255,.3) 80%, transparent 0);
+            background-size: 20px 20px;
+        }
+        .bg-6{
+            background-color: #eee;
+            background-image: linear-gradient(45deg, rgba(0,0,0,.1) 50%, transparent 0),linear-gradient(315deg, rgba(0,0,0,.1) 50%, transparent 0);
+            background-size: 20px 20px;
+        }
+        .bg-7{
+            background-color: #eee;
+            background-image:
+                linear-gradient(45deg, #bbb 25%, transparent 0),
+                linear-gradient(45deg, transparent 75%, #bbb 0),
+                linear-gradient(45deg, #bbb 25%, transparent 0),
+                linear-gradient(45deg, transparent 75%, #bbb 0);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px,10px 10px, 20px 20px;
+        }
+        .bg-8{
+            background-color: hsl(20, 40%, 90%);
+            background-image:
+                    linear-gradient(90deg, #a8ffe9 17%, transparent 0),
+                    linear-gradient(90deg, rgba(247, 247, 202, 0.99) 37%, transparent 0),
+                    linear-gradient(90deg, #feb3fb 47%, transparent 0);
+            background-size: 7% 100%, 17% 100%, 23% 100%;
+        }
+        .bg-9{
+            background-color: #58A;
+            background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+            background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+            background-size: 30px 30px;
+            -webkit-animation: bg-stripes 2s linear infinite;
+            animation: bg-stripes 2s linear infinite;
+        }
+        @keyframes bg-stripes {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 30px 0;
+            }
+        }
+        .bg-10{
+            box-sizing: border-box;
+            border: 10px solid transparent;
+            background: linear-gradient(#fff,#ddd) content-box, repeating-linear-gradient(-45deg, #d50000 0, #d50000 12.5%, transparent 0, transparent 25%, #5588aa 0, #58a 37.5%, transparent 0, transparent 50%) 50% / 20px 20px border-box;
+        }
+    </style>
+    <title>渐变背景</title>
+</head>
+<body>
+    <div class="bg-1"></div>
+    <div class="bg-2"></div>
+    <div class="bg-3"></div>
+    <div class="bg-4"></div>
+    <div class="bg-5"></div>
+    <div class="bg-6"></div>
+    <div class="bg-7"></div>
+    <div class="bg-8"></div>
+    <div class="bg-9"></div>
+    <div class="bg-10"></div>
+</body>
+</html>
