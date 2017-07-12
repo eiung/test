@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <style>
+        a{
+            display: block;
+            height: 200px;
+            width: 300px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 30px;
+            color: #fff;
+            text-decoration: none;
+            background-color: #5e8395;
+            position: relative;
+        }
+        a:hover:after{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            content:'';
+            background-color: rgba(255,255,255,.3);
+            z-index: 9;
+        }
+        a:nth-child(2n){background-color: #44c54e  }
+        a:first-child, a:last-child{background-color: #00c5a1}
+
+
+        .carousel-box{
+            width: 300px;
+            height: 200px;
+            margin: 0 auto 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel-box:hover .inner{
+            animation-play-state: paused;
+        }
+        .inner{
+            position: absolute;
+            top:0;
+            left: 0;
+            overflow: hidden;
+            animation: top 12s linear infinite ;
+        }
+        @keyframes top {
+            0%,3%{top:0;}
+            25%,31%{top:-200px;}
+            50%,56%{top:-400px;}
+            75%,81%{top:-600px;}
+            97%,100%{top:-800px}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="carousel-box">
+        <div class="inner">
+            <a href="">第一页</a>
+            <a href="">第二页</a>
+            <a href="">第三页</a>
+            <a href="">第四页</a>
+            <a href="">第一页</a>
+        </div>
+    </div>
+</body>
+</html>
