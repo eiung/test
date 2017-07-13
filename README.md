@@ -1,2 +1,2 @@
-# 简书 DEMO 全部为静态页面
+# 简书 demo http://www.jianshu.com/u/8b6f2b5a445f
 
