@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>立体太极图</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 10% auto;
+            perspective: 800px;
+            position: relative;
+        }
+        .bo-inner{
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            position: absolute;
+        }
+        .main{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            opacity: 1;
+            background: linear-gradient(#fff,#fff 50% ,#000 50%, #000 100%);
+            position: relative;
+            border: 1px solid #000;
+            animation: rotate linear 5s infinite;
+        }
+        .main:after{
+            position: absolute;
+            display: block;
+            left: 0;
+            top: 25%;
+            width: 50%;
+            height: 50%;
+            border-radius: 50%;
+            content:'';
+            background: radial-gradient(#fff,#fff 25% ,#000 25%, #000 100%);
+        }
+        .main:before{
+            position: absolute;
+            display: block;
+            right: 0;
+            top: 25%;
+            width: 50%;
+            height: 50%;
+            border-radius: 50%;
+            content:'';
+            background: radial-gradient(#000,#000 25% ,#fff 25%, #fff 100%);
+        }
+        @keyframes rotate {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .bo{
+            width: 100px;
+            height:20px;
+            opacity:1;
+            position: absolute;
+            top:25%;
+            left: 25%;
+            backface-visibility: hidden;
+            box-sizing: border-box;
+        }
+        .bo1{
+            transform: rotateY(0deg) translateZ(200px);
+            animation: bo1 linear 20s infinite;
+            border-left: 40px solid #444;
+            border-right: 40px solid #444;
+            background-color: #444;
+        }
+        .bo2{
+            transform: rotateY(45deg ) translateZ(200px);
+            animation: bo2 linear 20s infinite;
+            border-left: 40px solid #444;
+            border-right: 40px solid #444;
+        }
+        .bo3{
+            transform: rotateY(90deg)  translateZ(200px);
+            animation: bo3 linear 20s infinite;
+            border-left: 40px solid #444;
+            border-right: 40px solid #444;
+        }
+        .bo4{
+            transform: rotateY(135deg) translateZ(200px);
+            animation: bo4 linear 20s infinite;
+            border-left: 40px solid #444;
+            border-right: 40px solid #444;
+        }
+        .bo5{
+            transform: rotateY(180deg) translateZ(200px);
+            animation: bo5 linear 20s infinite;
+            border-left: 40px solid #444;
+            border-right: 40px solid #444;
+        }
+
+        .bo6{
+            transform: rotateY(225deg) translateZ(200px);
+            animation: bo6 linear 20s infinite;
+            border-left: 40px solid #444;
+            border-right: 40px solid #444;
+            background-color: #444;
+        }
+        .bo7{
+            transform: rotateY(270deg) translateZ(200px);
+            animation: bo7 linear 20s infinite;
+            border-left: 40px solid #444;
+            border-right: 40px solid #444;
+            background-color: #444;
+        }
+        .bo8{
+            transform: rotateY(315deg) translateZ(200px);
+            animation: bo8 linear 20s infinite;
+            border-left: 40px solid #444;
+            border-right: 40px solid #444;
+            background-color: #444;
+        }
+
+        .bo1:after, .bo2:after , .bo3:after, .bo8:after{
+            position: absolute;
+            display: block;
+            left: -40px;
+            top: 40px;
+            width: 100%;
+            height: 20px;
+            content: '';
+            border-left: 40px solid #444;
+            border-right: 40px solid #444;
+            background-color: #444;
+
+        }
+        .bo4:after, .bo5:after, .bo6:after, .bo7:after{
+            position: absolute;
+            display: block;
+            left: -40px;
+            top: 40px;
+            width: 100%;
+            height: 20px;
+            content: '';
+            border-left: 40px solid #444;
+            border-right: 40px solid #444;
+        }
+        .bo1:before, .bo2:before , .bo4:before, .bo7:before{
+            position: absolute;
+            display: block;
+            left: -40px;
+            top: 80px;
+            width: 100%;
+            height: 20px;
+            content: '';
+            border-left: 40px solid #444;
+            border-right: 40px solid #444;
+            background-color: #444;
+        }
+        .bo3:before, .bo5:before, .bo6:before, .bo8:before{
+            position: absolute;
+            display: block;
+            left: -40px;
+            top: 80px;
+            width: 100%;
+            height: 20px;
+            content: '';
+            border-left: 40px solid #444;
+            border-right: 40px solid #444;
+        }
+
+        @keyframes bo1 {
+            to {
+                transform: rotateY( 360deg  ) translateZ(200px);
+            }
+        }
+        @keyframes bo1 {
+            to {
+                transform: rotateY( 405deg  ) translateZ(200px);
+            }
+        }
+        @keyframes bo2 {
+            to {
+                transform: rotateY( 455deg  ) translateZ(200px);
+            }
+        }
+        @keyframes bo3 {
+            to {
+                transform: rotateY( 500deg  ) translateZ(200px);
+            }
+        }
+        @keyframes bo4 {
+            to {
+                transform: rotateY( 545deg  ) translateZ(200px);
+            }
+        }
+        @keyframes bo5 {
+            to {
+                transform: rotateY( 590deg  ) translateZ(200px);
+            }
+        }
+        @keyframes bo6 {
+            to {
+                transform: rotateY( 635deg  ) translateZ(200px);
+            }
+        }
+        @keyframes bo7 {
+            to {
+                transform: rotateY( 680deg  ) translateZ(200px);
+            }
+        }
+        @keyframes bo8 {
+            to {
+                transform: rotateY( 725deg  ) translateZ(200px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="bo-inner">
+            <div class="main"></div>
+            <div class="bo bo1"></div>
+            <div class="bo bo2"></div>
+            <div class="bo bo3"></div>
+            <div class="bo bo4"></div>
+            <div class="bo bo5"></div>
+            <div class="bo bo6"></div>
+            <div class="bo bo7"></div>
+            <div class="bo bo8"></div>
+        </div>
+    </div>
+</body>
+</html>
