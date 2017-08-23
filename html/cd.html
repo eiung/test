@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>css 100%属性</title>
+    <style>
+        html ,body {margin: 0;padding: 0;background-color: #fff;}
+        body{padding: 20px;}
+        b {color: #0000cc;}
+        .test-box{width: 300px; height: 200px;background-color: #efefef;text-align: center;margin: 20px auto;font-size: 16px;position: relative}
+        .test{background-color: #666;color: #fff;}
+        .test1{width: 100%;margin-top: 10px;}
+        .test2{width: 50%;margin-top: 10px;}
+        .test3{height: 100%;width: 50px;margin-left:10px;float: left;}
+        .test4{height: 50%;width: 50px;margin-left:10px;float: left;}
+        .test5{line-height: 200%;font-size: 20px;margin-top: 10px;}
+        .test6{line-height: 100%;font-size: 20px;margin-top: 10px;}
+        .test7{line-height: 50%;font-size: 20px;margin-top: 10px;}
+        .test8{margin: 10%;}
+        .test9{margin-top: 20%;}
+        .test10{padding: 10%;}
+        .test11{padding-top: 20%;margin-top: 10px;}
+        .test12{position: relative;top:10%;left: 10%;width: 200px;}
+        .test12-tip{position:absolute;top: 0; left:0 ;width: 30px; height: 20px;background-color: #afaf08;}
+        .test13{font-size: 200%;}
+        .test14{font-size: 100%;margin-top: 10px;}
+        .test15{font-size: 16px;margin-top: 10px;}
+        .test16{ transform: translateY(20%) translateX(20%);width: 200px;height: 100px;}
+        .test16-tip{position:absolute;top: 0; left:0 ;width: 40px; height: 20px;background-color: #afaf08;}
+        .test17{
+            border: 10px solid transparent;
+            padding: 10px;
+            background-clip: content-box;
+            background-color: #0b97c4;
+            background-image: linear-gradient(#666, #666 100%);
+            background-size: 50% 50%;
+            width: 200px;height: 100px;
+            background-repeat: no-repeat;
+        }
+        .test18{
+            border-top-left-radius: 50% 50%;
+            border-bottom-right-radius: 100% 50%;
+            width: 300px;
+            height: 200px;
+        }
+
+        .i{background-color:hsl(240,65%,75%);}
+    </style>
+</head>
+<body>
+<div class="test-box">
+    测试的父元素:<br/>
+    width: 300px; <br/>
+    height: 200px; <br/>
+    background-color: #efefef; <br/>
+    text-align: center; <br/>
+    margin: 20px; <br/>
+    font-size: 16px;<br/>
+    position: relative
+</div>
+
+<div class="test-box">
+    <div class="test test1">width: 100%;</div>
+    <div class="test test2">width: 50%;</div>
+    width百分比指的是父元素的width的百分比
+</div>
+
+<div class="test-box">
+    <div class="test test3">height: 100%;</div>
+    <div class="test test4">height: 50%;</div>
+    height百分比指的是父元素的height的的百分比
+</div>
+
+<div class="test-box">
+    <div class="test test5">line-height: 200%;</div>
+    <div class="test test6">line-height: 100%;</div>
+    <div class="test test7">line-height: 50%;</div>
+    line-height百分比指的是自身font-size的百分比
+</div>
+
+<div class="test-box">
+    <div class="test test8">margin: 10%;</div>
+    <div class="test test9">margin-top: 20%</div>
+    margin百分比指的是父元素width的百分比,与父元素高度无关
+
+</div>
+
+<div class="test-box">
+    <div class="test test10">padding: 10%;</div>
+    <div class="test test11">padding-top: 20%</div>
+    padding百分比指的是父元素width的百分比,与父元素高度无关
+</div>
+
+<div class="test-box">
+    <div class="test test12">
+        position: relative;top:10%;left:10%;<br/>
+        top, bottom百分比指的是父元素height的百分比;
+        left, right百分比指的是父元素width的百分比;
+        关于absolute fixed请看下面的提示;
+    </div>
+    <div class="test12-tip">30*20</div>
+</div>
+<div>
+    position tips:<br/>
+    relative：<br/>
+    对象遵循常规流，并且参照自身在<b>常规流中</b>的位置通过top，right，bottom，left这4个定位偏移属性进行偏移时不会影响常规流中的任何元素。<br/>
+    absolute：<br/>
+    对象脱离常规流，此时偏移属性参照的是<b>离自身最近的定位祖先元素</b>，如果没有定位的祖先元素，则一直回溯到body元素。盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠。<br/>
+    fixed：<br/>
+    与absolute一致，但偏移定位是以<b>窗口</b>为参考。当出现滚动条时，对象不会随着滚动。
+</div>
+
+<div class="test-box">
+    <div class="test test13">font-size: 200%</div>
+    <div class="test test14">font-size: 100%</div>
+    <div class="test test15">font-size: 16px&nbsp;</div>
+    font-size百分比指的是父元素font-size的百分比
+</div>
+
+<div class="test-box">
+    <div class="test test16">transform: translateY(20%) translateX(20%);width: 200px;height: 100px;</div>
+    <div class="test16-tip">40*20</div>
+    <div style="margin-top: 30px;">
+        translate百分比指的是自身元素的width,height的百分比
+    </div>
+</div>
+
+<div class="test-box">
+    <div class="test test17">background-size: 20% 20%;width: 200px;height: 100px;background-repeat: no-repeat;</div>
+    background-size与自身width,height及background-clip相关
+</div>
+
+<div class="test-box">
+    <div class="test test18" style="line-height: 150%">
+        border-top-left-radius: 50% 50%;<br/>
+        border-bottom-right-radius: 100% 50%;<br/>
+        width: 300px;height: 200px;<br/>
+        border-radius: 第1个参数表示水平半径，第2个参数表示垂直半径，如第2个参数省略，则默认等于第1个参数;<br/>
+        border-radius:参数百分比跟自身的width,height相关
+    </div>
+</div>
+
+<div class="test-box">
+    <div class="test">
+        其他:<br>
+        动画<br/>
+        @keyframes name<br/>
+        {<br/>
+        0%   {}<br/>
+        50%  {}<br/>
+        100% {}<br/>
+        }<br/>
+        与指的是animation-duration动画持续时间的百分比</br><br/>
+        HSL 颜色<br/>
+        HSL 颜色值是这样规定的：hsl( Hue（色调）,Saturation（饱和度）,Lightness（亮度）)<br/>
+        Hue 是色盘上的度数（从 0 到 360） - 0 (或 360) 是红色，120 是绿色，240 是蓝色。<br/>
+        Saturation 是百分比值；0% 意味着灰色，而 100% 是全彩。<br/>
+        Lightness 同样是百分比值；0% 是黑色，100% 是白色<br/>
+        <i class="i">background-color:hsl(240,65%,75%);</i><br/>
+    </div>
+</div>
+
+</body>
+</html>
